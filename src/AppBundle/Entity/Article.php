@@ -8,14 +8,14 @@ use Doctrine\ORM\Mapping as ORM;
  * Art_article
  *
  * @ORM\Table(name="art_article")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\Art_articleRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ArticleRepository")
  */
-class Art_article
+class Article
 {
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="art_id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -72,7 +72,7 @@ class Art_article
      *
      * @param string $artTitre
      *
-     * @return Art_article
+     * @return Article
      */
     public function setArtTitre($artTitre)
     {
@@ -96,7 +96,7 @@ class Art_article
      *
      * @param string $artContenu
      *
-     * @return Art_article
+     * @return Article
      */
     public function setArtContenu($artContenu)
     {
@@ -120,7 +120,7 @@ class Art_article
      *
      * @param \DateTime $artDate
      *
-     * @return Art_article
+     * @return Article
      */
     public function setArtDate($artDate)
     {
@@ -144,7 +144,7 @@ class Art_article
      *
      * @param integer $artTypeId
      *
-     * @return Art_article
+     * @return Article
      */
     public function setArtTypeId($artTypeId)
     {
@@ -168,7 +168,7 @@ class Art_article
      *
      * @param integer $artUtiId
      *
-     * @return Art_article
+     * @return Article
      */
     public function setArtUtiId($artUtiId)
     {
