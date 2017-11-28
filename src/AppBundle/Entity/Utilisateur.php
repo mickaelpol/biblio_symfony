@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * UtiUtilisateur
+ * Utilisateur
  *
- * @ORM\Table(name="Uti_utilisateur")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\UtiUtilisateurRepository")
+ * @ORM\Table(name="uti_utilisateur")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UtilisateurRepository")
  */
-class UtiUtilisateur
+class Utilisateur
 {
     /**111
      * @var int
@@ -79,7 +79,7 @@ class UtiUtilisateur
      *
      * @param string $utiNom
      *
-     * @return UtiUtilisateur
+     * @return Utilisateur
      */
     public function setUtiNom($utiNom)
     {
@@ -103,7 +103,7 @@ class UtiUtilisateur
      *
      * @param string $utiPrenom
      *
-     * @return UtiUtilisateur
+     * @return Utilisateur
      */
     public function setUtiPrenom($utiPrenom)
     {
@@ -127,7 +127,7 @@ class UtiUtilisateur
      *
      * @param string $utiPseudo
      *
-     * @return UtiUtilisateur
+     * @return Utilisateur
      */
     public function setUtiPseudo($utiPseudo)
     {
@@ -151,7 +151,7 @@ class UtiUtilisateur
      *
      * @param string $utiMail
      *
-     * @return UtiUtilisateur
+     * @return Utilisateur
      */
     public function setUtiMail($utiMail)
     {
@@ -175,7 +175,7 @@ class UtiUtilisateur
      *
      * @param string $utiMotDePasse
      *
-     * @return UtiUtilisateur
+     * @return Utilisateur
      */
     public function setUtiMotDePasse($utiMotDePasse)
     {
@@ -199,7 +199,7 @@ class UtiUtilisateur
      *
      * @param string $utiRang
      *
-     * @return UtiUtilisateur
+     * @return Utilisateur
      */
     public function setUtiRang($utiRang)
     {
