@@ -2,16 +2,16 @@
 
 namespace AppBundle\Entity;
 
-use FOS\UtilisateurBundle\Entity\Utilisateur as BaseUtilisateur;
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Utilisateur
+ * Utilisateur  
  *
  * @ORM\Table(name="uti_utilisateur")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UtilisateurRepository")
  */
-class Utilisateur
+class Utilisateur extends BaseUser
 {
     /**
      * @var int
@@ -20,7 +20,7 @@ class Utilisateur
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -48,7 +48,7 @@ class Utilisateur
      *
      * @ORM\Column(name="uti_mail", type="string", length=255, unique=true)
      */
-    private $utiMail;
+    protected $utiMail;
 
     /**
      * @var string
@@ -63,6 +63,12 @@ class Utilisateur
      * @ORM\Column(name="uti_rang", type="string", length=255)
      */
     private $utiRang;
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
 
 
     /**
