@@ -2,10 +2,11 @@
 
 namespace AppBundle\Entity;
 
+use FOS\UtilisateurBundle\Entity\Utilisateur as BaseUtilisateur;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * UtiUtilisateur
+ * Utilisateur
  *
  * @ORM\Table(name="uti_utilisateur")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UtilisateurRepository")
