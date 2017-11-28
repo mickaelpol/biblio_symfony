@@ -12,10 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Utilisateur
 {
-    /**111
+    /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="uti_id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
