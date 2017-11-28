@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use FOS\UtilisateurBundle\Entity\Utilisateur as BaseUtilisateur;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
