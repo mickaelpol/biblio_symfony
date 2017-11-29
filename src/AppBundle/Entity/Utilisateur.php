@@ -25,42 +25,42 @@ class Utilisateur extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_nom", type="string", length=255)
+     * @ORM\Column(name="uti_nom", type="string", length=255, nullable=true)
      */
     private $utiNom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_prenom", type="string", length=255)
+     * @ORM\Column(name="uti_prenom", type="string", length=255, nullable=true)
      */
     private $utiPrenom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_pseudo", type="string", length=255, unique=true)
+     * @ORM\Column(name="uti_pseudo", type="string", length=255, unique=true, nullable=true)
      */
     private $utiPseudo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_mail", type="string", length=255, unique=true)
+     * @ORM\Column(name="uti_mail", type="string", length=255, unique=true, nullable=true)
      */
     protected $utiMail;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_motDePasse", type="string", length=255)
+     * @ORM\Column(name="uti_motDePasse", type="string", length=255, nullable=true)
      */
     private $utiMotDePasse;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_rang", type="string", length=255)
+     * @ORM\Column(name="uti_rang", type="string", length=255, nullable=true)
      */
     private $utiRang;
 
