@@ -2,16 +2,16 @@
 
 namespace AppBundle\Entity;
 
-use FOS\UtilisateurBundle\Entity\Utilisateur as BaseUtilisateur;
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Utilisateur
+ * Utilisateur  
  *
  * @ORM\Table(name="uti_utilisateur")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UtilisateurRepository")
  */
-class Utilisateur
+class Utilisateur extends BaseUser
 {
     /**
      * @var int
@@ -20,49 +20,55 @@ class Utilisateur
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_nom", type="string", length=255)
+     * @ORM\Column(name="uti_nom", type="string", length=255, nullable=true)
      */
     private $utiNom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_prenom", type="string", length=255)
+     * @ORM\Column(name="uti_prenom", type="string", length=255, nullable=true)
      */
     private $utiPrenom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_pseudo", type="string", length=255, unique=true)
+     * @ORM\Column(name="uti_pseudo", type="string", length=255, unique=true, nullable=true)
      */
     private $utiPseudo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_mail", type="string", length=255, unique=true)
+     * @ORM\Column(name="uti_mail", type="string", length=255, unique=true, nullable=true)
      */
-    private $utiMail;
+    protected $utiMail;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_motDePasse", type="string", length=255)
+     * @ORM\Column(name="uti_motDePasse", type="string", length=255, nullable=true)
      */
     private $utiMotDePasse;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="uti_rang", type="string", length=255)
+     * @ORM\Column(name="uti_rang", type="string", length=255, nullable=true)
      */
     private $utiRang;
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
 
 
     /**
